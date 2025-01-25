@@ -11,7 +11,7 @@ type ButtonProps = {
 export const Button: React.FC<ButtonProps> = ({
   type = "button",
   onClick,
-  className = "bg-blue-500 text-white p-2 rounded w-full",
+  className = "bg-blue-500 text-white p-2 rounded w-full cursor-pointer",
   label,
   disabled = false,
   ...props

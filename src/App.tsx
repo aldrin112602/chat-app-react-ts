@@ -1,12 +1,14 @@
-import { Signin } from "./authentication/signin/signin"
-// import { Signup } from "./authentication/signup/signup"
+import { Signin } from "./auth/features/signin/signin";
+// import { Signup } from "./auth/features/signup/signup";
+
 
 function App() {
   return (
-    <>
-      <Signin/>
-    </>
-  )
+  <>
+    <Signin/>
+    {/* <Signup/> */}
+  </>
+  );
 }
 
-export default App
+export default App;
