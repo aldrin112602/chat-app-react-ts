@@ -35,7 +35,7 @@ export const GithubSignin = () => {
     <Button
       onClick={handleGitHubLogin}
       label="Sign in with GitHub"
-      className="border bg-slate-900 text-white rounded block w-full my-3 py-2 cursor-pointer"
+      className="border hover:opacity-90 bg-slate-900 text-white rounded block w-full my-3 py-2 cursor-pointer"
     />
   );
 };

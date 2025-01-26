@@ -1,9 +1,7 @@
 import { Layout } from "../../components/layout";
 import { Input } from "../../../components/input";
 import { Button } from "../../../components/button";
-import { GoogleSignin } from "../connect-providers/google/googleSignin";
-import { GithubSignin } from "../connect-providers/github/githubSignin";
-
+import { ProvidersLayout } from "../connect-providers/providersLayout";
 
 export const Signin = () => {
   return (
@@ -36,8 +34,7 @@ export const Signin = () => {
         <div className="border-t border-gray-300"></div>
         <p className="mt-5 text-center text-gray-500">Or</p>
         <div className="mt-5">
-          <GoogleSignin />
-          <GithubSignin />
+          <ProvidersLayout />
         </div>
       </form>
     </Layout>
