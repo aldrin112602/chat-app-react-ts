@@ -12,7 +12,7 @@ type InputProps = {
 
 export const Input: React.FC<InputProps> = ({
   type = "text",
-  className = "border-2 border-gray-300 p-2 rounded w-full",
+  className = "border-1 border-gray-100 p-2 rounded w-full",
   placeholder,
   name,
   label,
