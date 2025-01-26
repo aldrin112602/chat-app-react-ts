@@ -1,25 +1,13 @@
-import { GoogleLogin, CredentialResponse } from "@react-oauth/google";
-import { jwtDecode } from "jwt-decode";
-
-type DecodedToken = {
-  email: string;
-  name: string;
-  picture: string;
-};
+import { useGoogleLogin } from "@react-oauth/google";
+import { Button } from "../../../../components/button";
 
 export const GoogleSignin = () => {
-  const responseMessage = (response: CredentialResponse) => {
-    if (response.credential) {
-      try {
-        // Decode the JWT credential to get user information
-        const decoded: DecodedToken = jwtDecode(response.credential);
-        console.log("User:", decoded);
-        
-      } catch (error) {
-        console.error("Failed to decode token:", error);
-      }
-    }
-  };
+  const login = useGoogleLogin({
+    onSuccess: (response: any) => {
+      console.log(response);
+    },
+    onError: (error) => console.log("Login Failed:", error),
+  });
 
-  return <GoogleLogin onSuccess={responseMessage} />;
+  return <Button label="Sign in with Google" onClick={login} />;
 };

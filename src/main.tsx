@@ -3,9 +3,10 @@ import { createRoot } from "react-dom/client";
 import "./assets/styles/index.css";
 import App from "./App.tsx";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import config from "./config.ts";
 
 // Import environment variable
-const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
+const { googleClientId } = config
 
 createRoot(document.getElementById("root")!).render(
   <GoogleOAuthProvider clientId={googleClientId}>

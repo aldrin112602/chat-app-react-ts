@@ -2,6 +2,7 @@ import { Layout } from "../../components/layout";
 import { Input } from "../../../components/input";
 import { Button } from "../../../components/button";
 import { GoogleSignin } from "../connect-providers/google/googleSignin";
+import { GithubSignin } from "../connect-providers/github/githubSignin";
 
 
 export const Signin = () => {
@@ -34,8 +35,9 @@ export const Signin = () => {
         </p>
         <div className="border-t border-gray-300"></div>
         <p className="mt-5 text-center text-gray-500">Or</p>
-        <div className="flex justify-center space-x-2 mt-5">
+        <div className="mt-5">
           <GoogleSignin />
+          <GithubSignin />
         </div>
       </form>
     </Layout>
